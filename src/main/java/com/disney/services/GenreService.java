@@ -1,0 +1,51 @@
+package com.disney.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.disney.pojo.Genre;
+import com.disney.repositories.IGenreDB;
+import com.disney.services.interfaces.IGenreService;
+
+@Service
+public class GenreService implements IGenreService {
+	
+	@Autowired
+	IGenreDB iGenreDB;
+
+	@Override
+	public void postGenre(Genre genre) {
+		iGenreDB.save(genre);
+	}
+
+	@Override
+	public void putGenre(Genre genre) {
+		iGenreDB.save(genre);
+	}
+
+	@Override
+	public void deleteGenre(Integer idGenre) {
+		iGenreDB.deleteById(idGenre);
+	}
+
+	@Override
+	public Optional<Genre> findByIdGenre(Integer idGenre) {
+		return iGenreDB.findById(idGenre);
+	}
+
+	@Override
+	public List<Genre> findByGenreName(String genreName) {
+		return iGenreDB.findByGenreName(genreName);
+	}
+
+	@Override
+	public List<Genre> showAllGenres() {
+		return iGenreDB.findAll();
+	}
+	
+	
+
+}

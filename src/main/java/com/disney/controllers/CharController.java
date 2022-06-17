@@ -33,7 +33,7 @@ public class CharController {
 	}
 	
 	@PostMapping
-	public void postChar(@RequestBody Char character) {
+	public void crateChar(@RequestBody Char character) {
 		iCharService.createChar(character);
 	}
 	

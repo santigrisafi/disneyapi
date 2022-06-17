@@ -15,7 +15,7 @@ public interface IGenreService {
 	
 	public Optional<Genre> findByIdGenre(Integer idGenre);
 	
-	public List<Genre> findByNameGenre(String genreName);
+	public List<Genre> findByNameGenre(String nameGenre);
 	
 	public List<Genre> getGenreInfo();
 

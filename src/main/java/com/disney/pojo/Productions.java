@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -33,10 +34,20 @@ public class Productions {
 	@Column(name="score", nullable=false)
 	private Double score;
 
-	@ManyToMany()
-	private List<Char> characters;
+	@ManyToMany
+	@JoinTable(
+			name = "characters_productions",
+			joinColumns = @JoinColumn(name = "id_production"),
+			inverseJoinColumns = @JoinColumn(name = "id_char")
+	)
+	private List<Char> characters = new ArrayList<>();
 
-	@ManyToMany()
+	@ManyToMany
+	@JoinTable(
+			name = "genres_productions",
+			joinColumns = @JoinColumn(name = "id_production"),
+			inverseJoinColumns = @JoinColumn(name = "id_genre")
+	)
 	private List<Genre> genres;
 
 }

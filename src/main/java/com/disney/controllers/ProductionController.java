@@ -20,7 +20,7 @@ import com.disney.services.interfaces.IProductionService;
 @RequestMapping("productions")
 public class ProductionController {
 	
-	@Autowired
+	/*@Autowired
 	IProductionService iProductionService;
 	
 	@GetMapping
@@ -51,5 +51,5 @@ public class ProductionController {
 	@GetMapping("/{idProduction}")
 	public Optional<Productions> findByIdProduction(@PathVariable Integer idProduction){
 		return iProductionService.findByIdProduction(idProduction);
-	}
+	}*/
 }

@@ -37,7 +37,7 @@ public class Char {
 	@Column(name = "storyChar", nullable = false)
 	public String storyChar;
 
-	@ManyToMany()
+	@ManyToMany(mappedBy = "characters")
 	public List<Productions> productions;
 
 }

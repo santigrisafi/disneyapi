@@ -28,6 +28,6 @@ public class Genre {
 	@Column(name="urlImage", nullable=false, unique=true)
 	private String urlImage;
 
-	@ManyToMany()
+	@ManyToMany(mappedBy = "genres")
 	private List<Productions> movies;
 }

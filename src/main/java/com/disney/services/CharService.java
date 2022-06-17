@@ -13,7 +13,7 @@ import com.disney.services.interfaces.ICharService;
 @Service
 public class CharService implements ICharService{
 	
-	@Autowired
+	@Autowired(required=true)
 	ICharacterDB iCharacterDB;
 
 	@Override

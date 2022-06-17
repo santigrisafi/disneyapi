@@ -17,12 +17,12 @@ public class GenreService implements IGenreService {
 	IGenreDB iGenreDB;
 
 	@Override
-	public void postGenre(Genre genre) {
+	public void createGenre(Genre genre) {
 		iGenreDB.save(genre);
 	}
 
 	@Override
-	public void putGenre(Genre genre) {
+	public void updateGenre(Genre genre) {
 		iGenreDB.save(genre);
 	}
 
@@ -37,12 +37,12 @@ public class GenreService implements IGenreService {
 	}
 
 	@Override
-	public List<Genre> findByGenreName(String genreName) {
-		return iGenreDB.findByGenreName(genreName);
+	public List<Genre> findByNameGenre(String genreName) {
+		return iGenreDB.findByNameGenre(genreName);
 	}
 
 	@Override
-	public List<Genre> showAllGenres() {
+	public List<Genre> getGenreInfo() {
 		return iGenreDB.findAll();
 	}
 	

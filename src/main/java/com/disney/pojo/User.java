@@ -39,6 +39,4 @@ public class User {
 	
 	@Column(name="idRol", nullable=false)
 	public Integer idRol;
-
-	
 }

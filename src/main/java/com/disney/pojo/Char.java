@@ -25,8 +25,8 @@ public class Char {
 	@Column(name="imageUrl", nullable=false)
 	public String imageUrl;
 	
-	@Column(name="charName", nullable=false)
-	public String charName;
+	@Column(name="nameChar", nullable=false)
+	public String nameChar;
 
 	@Column(name="ageChar", nullable=false)
 	public Integer ageChar;

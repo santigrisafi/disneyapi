@@ -22,8 +22,8 @@ public class Genre {
 	@Column(unique=true, nullable=false, name="idGenre")
 	public Integer idGenre;
 	
-	@Column(name="genreName", nullable=false, unique=true)
-	private String genreName;
+	@Column(name="nameGenre", nullable=false, unique=true)
+	private String nameGenre;
 	
 	@Column(name="urlImage", nullable=false, unique=true)
 	private String urlImage;

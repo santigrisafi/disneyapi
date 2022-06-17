@@ -25,8 +25,8 @@ public class Char {
 	@Column(name="imageUrl", nullable=false)
 	public String imageUrl;
 	
-	@Column(name="charName", nullable=false)
-	public String charName;
+	@Column(name="nameChar", nullable=false)
+	public String nameChar;
 
 	@Column(name="ageChar", nullable=false)
 	public Integer ageChar;
@@ -38,5 +38,9 @@ public class Char {
 	public String storyChar;
 
 	@ManyToMany()
+<<<<<<< HEAD
 	public List<Productions> productions;
+=======
+	public List<Productions> movies;
+>>>>>>> 6a8462078b05e79f8afa1874e6d8499ddecfe117
 }

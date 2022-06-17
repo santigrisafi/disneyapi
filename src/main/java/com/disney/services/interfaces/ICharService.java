@@ -7,7 +7,7 @@ import com.disney.pojo.Char;
 
 public interface ICharService {
 	
-	public void createChar(Char character);
+	public Char createChar(Char character);
 	
 	public void updateChar(Char character);
 	

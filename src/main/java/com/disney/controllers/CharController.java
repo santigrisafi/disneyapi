@@ -3,14 +3,8 @@ package com.disney.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import com.disney.pojo.Char;
 import com.disney.services.interfaces.ICharService;
@@ -33,13 +27,19 @@ public class CharController {
 	}
 	
 	@PostMapping
-	public void crateChar(@RequestBody Char character) {
-		iCharService.createChar(character);
+	public Char crateChar(@RequestBody Char character) {
+		return iCharService.createChar(character);
 	}
-	
+
+	//TODO: fix error handling
 	@DeleteMapping("/{idChar}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void deleteChar(@PathVariable Integer idChar) {
-		iCharService.deleteChar(idChar);
+		try {
+			iCharService.deleteChar(idChar);
+		} catch (Exception e) {
+
+		}
 	}
 	
 	@PutMapping("/{idChar}")

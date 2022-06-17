@@ -17,8 +17,8 @@ public class CharService implements ICharService{
 	ICharacterDB iCharacterDB;
 
 	@Override
-	public void createChar(Char character) {
-		iCharacterDB.save(character);
+	public Char createChar(Char character) {
+		return iCharacterDB.save(character);
 	}
 
 	@Override

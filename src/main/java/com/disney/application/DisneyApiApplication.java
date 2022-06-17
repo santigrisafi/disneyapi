@@ -6,11 +6,14 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Repository;
 
 @SpringBootApplication
 @EnableAutoConfiguration
 @EntityScan("com.disney.pojo")
-@ComponentScan("com.disney.controllers")
+@EnableJpaRepositories("com.disney.repositories")
+@ComponentScan(basePackages = {"com.disney.controllers", "com.disney.services"})
 public class DisneyApiApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {

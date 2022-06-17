@@ -17,17 +17,17 @@ public class CharService implements ICharService{
 	ICharacterDB iCharacterDB;
 
 	@Override
-	public void postChar(Char character) {
+	public void createChar(Char character) {
 		iCharacterDB.save(character);
 	}
 
 	@Override
-	public void putChar(Char character) {
+	public void updateChar(Char character) {
 		iCharacterDB.save(character);
 	}
 
 	@Override
-	public List<Char> showAllChars() {
+	public List<Char> getCharInfo() {
 		return iCharacterDB.findAll();
 	}
 

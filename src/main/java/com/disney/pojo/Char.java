@@ -14,7 +14,7 @@ import java.util.List;
 @Getter @Setter
 @ToString @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="chars")
+@Table(name="characters")
 public class Char {
 	
 	@Id
@@ -38,5 +38,5 @@ public class Char {
 	public String storyChar;
 
 	@ManyToMany()
-	public List<Movie> movies;
+	public List<Productions> productions;
 }

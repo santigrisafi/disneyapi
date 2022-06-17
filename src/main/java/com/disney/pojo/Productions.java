@@ -11,30 +11,27 @@ import lombok.ToString;
 import java.util.List;
 
 @Entity
-@Table(name="movies")
+@Table(name="productions")
 @ToString @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
-public class Movie {
+public class Productions {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idMovie", unique=true, nullable=false)
-	private Integer idMovie;
+	@Column(name="idProduction", unique=true, nullable=false)
+	private Integer idProduction;
 
 	@Column(name="urlImage", nullable=false)
 	private String urlImage;
 
-	@Column(name="titleMovie", nullable=false)
-	private String titleMovie;
-
+	@Column(name="title", nullable=false)
+	private String title;
+	
 	@Column(name="releaseDate", nullable=false)
-	private String dateReleaseMovie;
+	private String releaseDate;
 
 	@Column(name="score", nullable=false)
 	private Double score;
-
-	@Column(name="idChar", nullable=false)
-	private Integer idChar;
 
 	@ManyToMany()
 	private List<Char> characters;

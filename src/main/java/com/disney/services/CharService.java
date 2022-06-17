@@ -42,33 +42,8 @@ public class CharService implements ICharService{
 	}
 
 	@Override
-	public List<Char> findByCharName(String charName) {
-		return iCharacterDB.findByCharName(charName);
-	}
-
-	@Override
-	public List<Char> findByHeight(Double height) {
-		return iCharacterDB.findByHeightChar(height);
-	}
-
-	@Override
-	public List<Char> findByWeight(Double weight) {
-		return iCharacterDB.findByWeightChar(weight);
-	}
-
-	@Override
-	public List<Char> findByAgeChar(Integer ageChar) {
-		return iCharacterDB.findByAgeChar(ageChar);
-	}
-
-	@Override
-	public List<Char> findByLastName(String lastName) {
-		return iCharacterDB.findByLastNameChar(lastName);
-	}
-
-	@Override
-	public Char findByImageUrl(String imageUrl) {
-		return iCharacterDB.findByImageUrl(imageUrl);
+	public List<Char> findByNameChar(String nameChar) {
+		return iCharacterDB.findByCharName(nameChar);
 	}
 
 }

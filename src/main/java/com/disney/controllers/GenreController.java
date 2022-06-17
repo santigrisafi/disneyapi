@@ -49,8 +49,8 @@ public class GenreController {
 		return iGenreService.findByIdGenre(idGenre);
 	}
 	
-	@GetMapping("/Genre/{genreName}")
-	public List<Genre> showGenreByGenreName(@PathVariable String genreName){
+	@GetMapping("/Genre/{nameGenre}")
+	public List<Genre> showGenreByNameGenre(@PathVariable String nameGenre){
 		return iGenreService.findByGenreName(genreName);
 	}*/
 }

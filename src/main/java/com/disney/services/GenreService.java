@@ -37,15 +37,12 @@ public class GenreService implements IGenreService {
 	}
 
 	@Override
-	public List<Genre> findByGenreName(String genreName) {
-		return iGenreDB.findByGenreName(genreName);
+	public List<Genre> findByNameGenre(String nameGenre) {
+		return iGenreDB.findByNameGenre(nameGenre);
 	}
 
 	@Override
 	public List<Genre> showAllGenres() {
 		return iGenreDB.findAll();
 	}
-	
-	
-
 }

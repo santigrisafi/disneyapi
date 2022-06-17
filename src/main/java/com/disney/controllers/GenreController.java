@@ -20,23 +20,23 @@ import com.disney.services.interfaces.IGenreService;
 @RequestMapping("genres")
 public class GenreController {
 	
-	/*@Autowired
+	@Autowired
 	IGenreService iGenreService;
 	
 	@GetMapping
-	public List<Genre> showAllGenres(){
-		return iGenreService.showAllGenres();
+	public List<Genre> getGenreInfo(){
+		return iGenreService.getGenreInfo();
 	}
 	
 	@PostMapping
-	public void postGenre(@RequestBody Genre genre) {
-		iGenreService.postGenre(genre);
+	public void createGenre(@RequestBody Genre genre) {
+		iGenreService.createGenre(genre);
 	}
 	
 	@PutMapping("/{idGenre}")
-	public void putGenre(@RequestBody Genre genre, @PathVariable Integer idGenre) {
+	public void updateGenre(@RequestBody Genre genre, @PathVariable Integer idGenre) {
 		genre.idGenre = idGenre;
-		iGenreService.putGenre(genre);
+		iGenreService.updateGenre(genre);
 	}
 	
 	@DeleteMapping("/{idGenre}")
@@ -45,12 +45,12 @@ public class GenreController {
 	}
 	
 	@GetMapping("/idGenre/{idGenre}")
-	public Optional<Genre> showByIdGenre(@PathVariable Integer idGenre){
+	public Optional<Genre> getByIdGenre(@PathVariable Integer idGenre){
 		return iGenreService.findByIdGenre(idGenre);
 	}
 	
 	@GetMapping("/Genre/{nameGenre}")
-	public List<Genre> showGenreByNameGenre(@PathVariable String nameGenre){
-		return iGenreService.findByGenreName(genreName);
-	}*/
+	public List<Genre> getByNameGenre(@PathVariable String nameGenre){
+		return iGenreService.findByNameGenre(nameGenre);
+	}
 }

@@ -43,7 +43,7 @@ public class CharService implements ICharService{
 
 	@Override
 	public List<Char> findByNameChar(String nameChar) {
-		return iCharacterDB.findByCharName(nameChar);
+		return iCharacterDB.findByNameChar(nameChar);
 	}
 
 }

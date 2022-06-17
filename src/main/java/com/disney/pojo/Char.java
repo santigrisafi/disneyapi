@@ -16,31 +16,28 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name="characters")
 public class Char {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idChar", unique=true, nullable=false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "idChar", unique = true, nullable = false)
 	public Integer idChar;
-	
-	@Column(name="imageUrl", nullable=false)
+
+	@Column(name = "imageUrl", nullable = false)
 	public String imageUrl;
-	
-	@Column(name="nameChar", nullable=false)
+
+	@Column(name = "nameChar", nullable = false)
 	public String nameChar;
 
-	@Column(name="ageChar", nullable=false)
+	@Column(name = "ageChar", nullable = false)
 	public Integer ageChar;
-	
-	@Column(name="weightChar", nullable=false)
+
+	@Column(name = "weightChar", nullable = false)
 	public Double weightChar;
-	
-	@Column(name="storyChar", nullable=false)
+
+	@Column(name = "storyChar", nullable = false)
 	public String storyChar;
 
 	@ManyToMany()
-<<<<<<< HEAD
 	public List<Productions> productions;
-=======
-	public List<Productions> movies;
->>>>>>> 6a8462078b05e79f8afa1874e6d8499ddecfe117
+
 }

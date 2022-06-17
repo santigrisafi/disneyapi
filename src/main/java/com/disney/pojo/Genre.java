@@ -29,5 +29,5 @@ public class Genre {
 	private String urlImage;
 
 	@ManyToMany()
-	private List<Movie> movies;
+	private List<Productions> movies;
 }

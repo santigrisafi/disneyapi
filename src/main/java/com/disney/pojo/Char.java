@@ -38,5 +38,5 @@ public class Char {
 	public String storyChar;
 
 	@ManyToMany()
-	public List<Movie> movies;
+	public List<Productions> movies;
 }

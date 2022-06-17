@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableAutoConfiguration
 @EntityScan("com.disney.pojo")
-@ComponentScan(basePackageClasses = DisneyApiApplication.class)
+@ComponentScan("com.disney.controllers")
 public class DisneyApiApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {

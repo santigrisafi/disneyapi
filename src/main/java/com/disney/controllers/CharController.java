@@ -19,10 +19,15 @@ import com.disney.services.interfaces.ICharService;
 @RequestMapping(value="/chars")
 public class CharController {
 	
-	@Autowired
-	ICharService iCharService;
-	
-	@GetMapping("")
+	/*@Autowired
+	ICharService iCharService;*/
+
+	@GetMapping("/ping")
+	public String ping(){
+		return "pong";
+	}
+
+	/*@GetMapping("")
 	public List<Char> showAllChars(){
 		return iCharService.showAllChars();
 	}
@@ -48,19 +53,9 @@ public class CharController {
 		return iCharService.findByWeight(character.weightChar);
 	}
 	
-	@GetMapping("/height")
-	public List<Char> findByHeight(@RequestBody Char character){
-		return iCharService.findByHeight(character.heightChar);
-	}
-	
 	@GetMapping("/charName")
 	public List<Char> findByNameChar(@RequestBody Char character){
 		return iCharService.findByCharName(character.charName);
-	}
-	
-	@GetMapping("/lastName")
-	public List<Char> findByLastName(@RequestBody Char character){
-		return iCharService.findByLastName(character.lastNameChar);
 	}
 	
 	@GetMapping("/ageChar")
@@ -71,6 +66,6 @@ public class CharController {
 	@GetMapping("/imageUrl/{imageUrl}")
 	public Char findByImageUrl(@PathVariable String imageUrl) {
 		return iCharService.findByImageUrl(imageUrl);
-	}
+	}*/
 
 }

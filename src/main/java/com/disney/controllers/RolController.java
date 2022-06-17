@@ -20,7 +20,7 @@ import com.disney.services.interfaces.IRolService;
 @RequestMapping("roles")
 public class RolController {
 	
-	@Autowired
+	/*@Autowired
 	IRolService iRolService;
 	
 	@GetMapping
@@ -52,5 +52,5 @@ public class RolController {
 	public Optional<Rol> findByIdRol(@PathVariable Integer idRol){
 		return iRolService.findByIdRol(idRol);
 	}
-
+*/
 }

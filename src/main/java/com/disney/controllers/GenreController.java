@@ -20,7 +20,7 @@ import com.disney.services.interfaces.IGenreService;
 @RequestMapping("genres")
 public class GenreController {
 	
-	@Autowired
+	/*@Autowired
 	IGenreService iGenreService;
 	
 	@GetMapping
@@ -52,9 +52,5 @@ public class GenreController {
 	@GetMapping("/Genre/{genreName}")
 	public List<Genre> showGenreByGenreName(@PathVariable String genreName){
 		return iGenreService.findByGenreName(genreName);
-	}
-	
-	
-	
-
+	}*/
 }

@@ -24,8 +24,7 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="idUser", nullable=false, unique=true)
 	public Integer idUser;
-	
-	
+
 	@Column(name="username", unique=true, nullable=false)
 	public String username;
 	

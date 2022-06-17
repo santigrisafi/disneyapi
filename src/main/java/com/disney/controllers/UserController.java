@@ -19,7 +19,7 @@ import com.disney.services.interfaces.IUserService;
 @RequestMapping("users")
 public class UserController {
 
-	@Autowired
+	/*@Autowired
 	IUserService iUserService;
 	
 	@GetMapping()
@@ -58,5 +58,5 @@ public class UserController {
 	@GetMapping("/idUser/{idUser}")
 	public Optional<User> findByIdUser(@PathVariable Integer idUser){
 		return iUserService.findByIdUser(idUser);
-	}
+	}*/
 }

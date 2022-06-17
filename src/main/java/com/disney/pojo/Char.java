@@ -1,17 +1,14 @@
 package com.disney.pojo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -30,25 +27,16 @@ public class Char {
 	
 	@Column(name="charName", nullable=false)
 	public String charName;
-	
-	@Column(name="lastNameChar", nullable=false)
-	public String lastNameChar;
-	
+
 	@Column(name="ageChar", nullable=false)
 	public Integer ageChar;
 	
 	@Column(name="weightChar", nullable=false)
 	public Double weightChar;
 	
-	@Column(name="heightChar", nullable=false)
-	public Double heightChar;
-	
 	@Column(name="storyChar", nullable=false)
 	public String storyChar;
-	
-	@Column(name="idSerie", nullable=false)
-	public Integer idSerie;
-	
-	@Column(name="idMovie", nullable=false)
-	public Integer idMovie;
+
+	@ManyToMany()
+	public List<Movie> movies;
 }

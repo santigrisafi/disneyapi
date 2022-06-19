@@ -11,7 +11,7 @@ public interface ICharService {
 	
 	public void updateChar(Char character);
 	
-	public List<Char> getCharInfo();
+	public List<Char> getAllCharsInfo();
 	
 	public void deleteChar(Integer idChar);
 	

@@ -16,14 +16,9 @@ public class CharController {
 	@Autowired
 	ICharService iCharService;
 
-	@GetMapping("/ping")
-	public String ping(){
-		return "pong";
-	}
-
 	@GetMapping
 	public List<Char> getCharInfo(){
-		return iCharService.getCharInfo();
+		return iCharService.getAllCharsInfo();
 	}
 	
 	@PostMapping

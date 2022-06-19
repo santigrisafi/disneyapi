@@ -27,7 +27,7 @@ public class CharService implements ICharService{
 	}
 
 	@Override
-	public List<Char> getCharInfo() {
+	public List<Char> getAllCharsInfo() {
 		return iCharacterDB.findAll();
 	}
 

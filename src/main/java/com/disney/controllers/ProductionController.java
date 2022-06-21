@@ -20,22 +20,22 @@ import com.disney.services.interfaces.IProductionService;
 @RequestMapping("productions")
 public class ProductionController {
 	
-	/*@Autowired
+	@Autowired
 	IProductionService iProductionService;
 	
 	@GetMapping
 	public List<Productions> showAllMovie(){
-		return iProductionService.showAllProductions();
+		return iProductionService.getProductionInfo();
 	}
 	
 	@PostMapping
 	public void postMovie(@RequestBody Productions production) {
-		iProductionService.postProduction(production);
+		iProductionService.createProduction(production);
 	}
 
 	@PutMapping("/idMovie/{idProduction}")
 	public void putMovie(@RequestBody Productions production, @PathVariable Integer idMovie) {
-		iProductionService.putProduction(production);
+		iProductionService.updateProduction(production);
 	}
 	
 	@DeleteMapping("/{idProduction}")
@@ -51,5 +51,5 @@ public class ProductionController {
 	@GetMapping("/{idProduction}")
 	public Optional<Productions> findByIdProduction(@PathVariable Integer idProduction){
 		return iProductionService.findByIdProduction(idProduction);
-	}*/
+	}
 }

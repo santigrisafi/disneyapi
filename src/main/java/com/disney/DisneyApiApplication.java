@@ -1,4 +1,4 @@
-package com.disney.application;
+package com.disney;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,9 +10,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@EntityScan("com.disney.pojo")
-@EnableJpaRepositories("com.disney.repositories")
-@ComponentScan(basePackages = {"com.disney.controllers", "com.disney.services"})
 public class DisneyApiApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
@@ -21,7 +18,7 @@ public class DisneyApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Disney API Version 1.0");
+		System.out.println("Disney API Running");
 	}
 
 }

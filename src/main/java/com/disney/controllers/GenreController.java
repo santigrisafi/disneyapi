@@ -11,7 +11,7 @@ import com.disney.pojo.Genre;
 import com.disney.services.interfaces.IGenreService;
 
 @RestController
-@RequestMapping("genres")
+@RequestMapping(value="genres")
 public class GenreController {
 	
 	@Autowired

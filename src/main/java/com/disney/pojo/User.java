@@ -40,6 +40,4 @@ public class User {
 	@Column(name="status", nullable=false)
 	public boolean status;
 	
-	@ManyToMany(mappedBy = "users")
-	public List<Rol> roles;
 }

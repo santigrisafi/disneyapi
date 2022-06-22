@@ -22,12 +22,12 @@ public class Genre {
 	@Column(unique=true, nullable=false, name="idGenre")
 	public Integer idGenre;
 	
-	@Column(name="nameGenre", unique=true)
-	private String nameGenre;
+	@Column(name="nameGenre", unique=true, nullable=false)
+	public String nameGenre;
 	
-	@Column(name="urlImage", unique=true)
-	private String urlImage;
+	@Column(name="urlImage", unique=true, nullable=false)
+	public String urlImage;
 
 	@ManyToMany(mappedBy = "genres")
-	private List<Productions> productions;
+	public List<Productions> productions;
 }

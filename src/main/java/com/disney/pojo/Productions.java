@@ -20,10 +20,10 @@ public class Productions {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="idProduction", unique=true, nullable=false)
-	private Integer idProduction;
+	public Integer idProduction;
 
 	@Column(name="urlImage", nullable=false)
-	private String urlImage;
+	public String urlImage;
 
 	@Column(name="title", nullable=false)
 	private String title;

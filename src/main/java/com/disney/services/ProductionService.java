@@ -14,56 +14,35 @@ import com.disney.services.interfaces.IProductionService;
 public class ProductionService implements IProductionService {
 	
 	@Autowired
-	IProductionDB iMovieDB;
+	IProductionDB iProductionDB;
 
 	@Override
-	public void postProduction(Productions movie) {
-		// TODO Auto-generated method stub
-		
+	public void createProduction(Productions production) {
+		iProductionDB.save(production);
 	}
 
 	@Override
-	public void deleteProduction(Integer idMovie) {
-		// TODO Auto-generated method stub
-		
+	public void deleteProduction(Integer idProduction) {
+		iProductionDB.deleteById(idProduction);
 	}
 
 	@Override
-	public void putProduction(Productions movie) {
-		// TODO Auto-generated method stub
-		
+	public void updateProduction(Productions production) {
+		iProductionDB.save(production);
 	}
 
 	@Override
-	public List<Productions> showAllProductions() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Productions> getProductionInfo() {
+		return iProductionDB.findAll();
 	}
 
 	@Override
-	public Optional<Productions> findByIdProduction(Integer idMovie) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<Productions> findByIdProduction(Integer idProduction) {
+		return iProductionDB.findById(idProduction);
 	}
 
 	@Override
-	public List<Productions> findByScore(Double scoreUser) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Productions> findByTitle(String titleProduction) {
+		return iProductionDB.findByTitle(titleProduction);
 	}
-
-	@Override
-	public List<Productions> findByTitle(String titleMovie) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Productions> findByReleaseDate(String releaseDate) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-
 }

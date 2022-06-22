@@ -19,22 +19,17 @@ import com.disney.services.interfaces.ICharService;
 @RequestMapping(value="/chars")
 public class CharController {
 	
-	/*@Autowired
-	ICharService iCharService;*/
+	@Autowired
+	ICharService iCharService;
 
-	@GetMapping("/ping")
-	public String ping(){
-		return "pong";
-	}
-
-	/*@GetMapping("")
+	@GetMapping
 	public List<Char> showAllChars(){
-		return iCharService.showAllChars();
+		return iCharService.getCharInfo();
 	}
 	
 	@PostMapping
-	public void postChar(@RequestBody Char character) {
-		iCharService.postChar(character);
+	public void createChar(@RequestBody Char character) {
+		iCharService.createChar(character);
 	}
 	
 	@DeleteMapping("/{idChar}")
@@ -45,27 +40,13 @@ public class CharController {
 	@PutMapping("/{idChar}")
 	public void putChar(@PathVariable Integer idChar, @RequestBody Char character) {
 		character.idChar = idChar;
-		iCharService.putChar(character);
-	}
-	
-	@GetMapping("/weight")
-	public List<Char> findByWeight(@RequestBody Char character){
-		return iCharService.findByWeight(character.weightChar);
+		iCharService.updateChar(character);
 	}
 	
 	@GetMapping("/charName")
 	public List<Char> findByNameChar(@RequestBody Char character){
-		return iCharService.findByCharName(character.charName);
+		return iCharService.findByNameChar(character.nameChar);
 	}
 	
-	@GetMapping("/ageChar")
-	public List<Char> findByAgeChar(@RequestBody Char character){
-		return iCharService.findByAgeChar(character.ageChar);
-	}
-	
-	@GetMapping("/imageUrl/{imageUrl}")
-	public Char findByImageUrl(@PathVariable String imageUrl) {
-		return iCharService.findByImageUrl(imageUrl);
-	}*/
 
 }

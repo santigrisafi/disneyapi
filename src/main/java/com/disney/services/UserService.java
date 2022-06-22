@@ -1,12 +1,11 @@
 package com.disney.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.disney.pojo.User;
+import com.disney.pojo.Users;
 import com.disney.repositories.IUserDB;
 import com.disney.services.interfaces.IUserService;
 
@@ -17,38 +16,23 @@ public class UserService implements IUserService{
 	IUserDB iUserDB;
 	
 	@Override
-	public void postUser(User user) {
+	public void createUser(Users user) {
 		iUserDB.save(user);
 	}
 	
 	@Override
-	public void putUser(User user) {
+	public void updateUser(Users user) {
 		iUserDB.save(user);
 	}
 	
 	@Override
-	public void deleteUser(User user) {
+	public void deleteUser(Users user) {
 		iUserDB.save(user);
 	}
 
 	@Override
-	public List<User> showAllUsers() {
+	public List<Users> getUserInfo() {
 		return iUserDB.findByStatus(true);
-	}
-
-	@Override
-	public User findByUsername(String username) {
-		return iUserDB.findByUsername(username);
-	}
-
-	@Override
-	public User findByEmail(String email) {
-		return iUserDB.findByEmail(email);
-	}
-
-	@Override
-	public Optional<User> findByIdUser(Integer idUser) {
-		return iUserDB.findById(idUser);
 	}
 
 }

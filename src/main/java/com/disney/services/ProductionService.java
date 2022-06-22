@@ -17,7 +17,7 @@ public class ProductionService implements IProductionService {
 	IProductionDB iMovieDB;
 
 	@Override
-	public void postProduction(Productions movie) {
+	public void createProduction(Productions movie) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -29,7 +29,7 @@ public class ProductionService implements IProductionService {
 	}
 
 	@Override
-	public void putProduction(Productions movie) {
+	public void updateProduction(Productions movie) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -58,12 +58,5 @@ public class ProductionService implements IProductionService {
 		return null;
 	}
 
-	@Override
-	public List<Productions> findByReleaseDate(String releaseDate) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 
 }

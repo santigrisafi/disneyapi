@@ -2,16 +2,16 @@ package com.disney.services.interfaces;
 
 import java.util.List;
 
-import com.disney.pojo.User;
+import com.disney.pojo.Users;
 
 public interface IUserService {
 	
-	public List<User> showAllUsers();
+	public List<Users> getUserInfo();
 	
-	public void createUser(User user);
+	public void createUser(Users user);
 	
-	public void updateUser(User user);
+	public void updateUser(Users user);
 	
-	public void deleteUser(User user);
+	public void deleteUser(Users user);
 
 }

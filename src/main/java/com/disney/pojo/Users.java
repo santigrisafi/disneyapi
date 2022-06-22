@@ -18,7 +18,7 @@ import lombok.ToString;
 @Getter @Setter @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class User {
+public class Users {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

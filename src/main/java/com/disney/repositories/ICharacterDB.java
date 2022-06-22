@@ -9,10 +9,5 @@ import com.disney.pojo.Char;
 
 @Repository
 public interface ICharacterDB extends JpaRepository<Char, Integer> {
-	public abstract List<Char> findByCharName(String charName);
-	public abstract List<Char> findByLastNameChar(String lastNameChar);
-	public abstract List<Char> findByAgeChar(Integer ageChar);
-	public abstract List<Char> findByWeightChar(Double weightChar);
-	public abstract List<Char> findByHeightChar(Double hightChar);
-	public Char findByImageUrl(String imageUrl);
+	public abstract List<Char> findByNameChar(String nameChar);
 }

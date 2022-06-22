@@ -7,11 +7,11 @@ import com.disney.pojo.Char;
 
 public interface ICharService {
 	
-	public void postChar(Char character);
+	public Char createChar(Char character);
 	
-	public void putChar(Char character);
+	public void updateChar(Char character);
 	
-	public List<Char> showAllChars();
+	public List<Char> getAllCharsInfo();
 	
 	public void deleteChar(Integer idChar);
 	

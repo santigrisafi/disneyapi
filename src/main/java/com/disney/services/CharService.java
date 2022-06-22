@@ -13,21 +13,21 @@ import com.disney.services.interfaces.ICharService;
 @Service
 public class CharService implements ICharService{
 	
-	@Autowired
+	@Autowired(required=true)
 	ICharacterDB iCharacterDB;
 
 	@Override
-	public void postChar(Char character) {
+	public Char createChar(Char character) {
+		return iCharacterDB.save(character);
+	}
+
+	@Override
+	public void updateChar(Char character) {
 		iCharacterDB.save(character);
 	}
 
 	@Override
-	public void putChar(Char character) {
-		iCharacterDB.save(character);
-	}
-
-	@Override
-	public List<Char> showAllChars() {
+	public List<Char> getAllCharsInfo() {
 		return iCharacterDB.findAll();
 	}
 
@@ -43,7 +43,7 @@ public class CharService implements ICharService{
 
 	@Override
 	public List<Char> findByNameChar(String nameChar) {
-		return iCharacterDB.findByCharName(nameChar);
+		return iCharacterDB.findByNameChar(nameChar);
 	}
 
 }

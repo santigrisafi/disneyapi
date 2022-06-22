@@ -19,7 +19,7 @@ import com.disney.services.interfaces.IUserService;
 @RequestMapping("users")
 public class UserController {
 
-	/*@Autowired
+	@Autowired
 	IUserService iUserService;
 	
 	@GetMapping()
@@ -28,14 +28,15 @@ public class UserController {
 	}
 	
 	@PostMapping
-	public void postUser(@RequestBody User user) {
-		iUserService.postUser(user);
+	public void createUser(@RequestBody User user) {
+		user.status = true;
+		iUserService.createUser(user);
 	}
 	
 	@PutMapping("/{idUser}")
 	public void putUser(@RequestBody User user, @PathVariable Integer idUser) {
 		user.idUser = idUser;
-		iUserService.putUser(user);
+		iUserService.updateUser(user);
 	}
 	
 	@PutMapping("/del/{idUser}")
@@ -58,5 +59,5 @@ public class UserController {
 	@GetMapping("/idUser/{idUser}")
 	public Optional<User> findByIdUser(@PathVariable Integer idUser){
 		return iUserService.findByIdUser(idUser);
-	}*/
+	}
 }

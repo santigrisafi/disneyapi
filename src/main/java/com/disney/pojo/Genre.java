@@ -12,9 +12,9 @@ import java.util.List;
 
 @Entity
 @Table(name="genres")
-@Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 @ToString
+@Getter @Setter
 public class Genre {
 	
 	@Id
@@ -22,12 +22,12 @@ public class Genre {
 	@Column(unique=true, nullable=false, name="idGenre")
 	public Integer idGenre;
 	
-	@Column(name="nameGenre", nullable=false, unique=true)
+	@Column(name="nameGenre", unique=true)
 	private String nameGenre;
 	
-	@Column(name="urlImage", nullable=false, unique=true)
+	@Column(name="urlImage", unique=true)
 	private String urlImage;
 
 	@ManyToMany(mappedBy = "genres")
-	private List<Productions> movies;
+	private List<Productions> productions;
 }

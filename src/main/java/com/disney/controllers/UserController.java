@@ -3,6 +3,7 @@ package com.disney.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -14,7 +15,7 @@ import com.disney.pojo.Users;
 import com.disney.services.interfaces.IUserService;
 
 @RestController
-@RequestMapping(value="auth")
+@RequestMapping("auth")
 public class UserController {
 	
 	@Autowired
@@ -31,11 +32,12 @@ public class UserController {
 		iUserService.createUser(user);
 	}
 	
-	@PostMapping("/login")
-	public void login (@RequestBody Users user) {
+	@GetMapping("/login")
+	public void login() {
 		
 	}
 	
+
 	@PutMapping("/{idUser}")
 	public void updateUser(@RequestBody Users user, @PathVariable Integer idUser) {
 		user.idUser = idUser;

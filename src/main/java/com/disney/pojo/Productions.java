@@ -26,13 +26,13 @@ public class Productions {
 	private String urlImage;
 
 	@Column(name="title", nullable=false)
-	private String title;
+	public String title;
 	
 	@Column(name="releaseDate", nullable=false)
-	private String releaseDate;
+	public String releaseDate;
 
 	@Column(name="score", nullable=false)
-	private Double score;
+	public Double score;
 
 	@ManyToMany
 	@JoinTable(
@@ -40,7 +40,7 @@ public class Productions {
 			joinColumns = @JoinColumn(name = "id_production"),
 			inverseJoinColumns = @JoinColumn(name = "id_char")
 	)
-	private List<Char> characters = new ArrayList<>();
+	public List<Char> characters = new ArrayList<>();
 
 	@ManyToMany
 	@JoinTable(
@@ -48,6 +48,6 @@ public class Productions {
 			joinColumns = @JoinColumn(name = "id_production"),
 			inverseJoinColumns = @JoinColumn(name = "id_genre")
 	)
-	private List<Genre> genres;
+	public List<Genre> genres;
 
 }

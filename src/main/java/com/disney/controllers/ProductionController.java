@@ -17,10 +17,10 @@ import com.disney.pojo.Productions;
 import com.disney.services.interfaces.IProductionService;
 
 @RestController
-@RequestMapping("productions")
+@RequestMapping(value="productions")
 public class ProductionController {
 	
-	/*@Autowired
+	@Autowired
 	IProductionService iProductionService;
 	
 	@GetMapping
@@ -29,27 +29,27 @@ public class ProductionController {
 	}
 	
 	@PostMapping
-	public void postMovie(@RequestBody Productions production) {
-		iProductionService.postProduction(production);
+	public void createProduction(@RequestBody Productions production) {
+		iProductionService.createProduction(production);
 	}
 
-	@PutMapping("/idMovie/{idProduction}")
-	public void putMovie(@RequestBody Productions production, @PathVariable Integer idMovie) {
-		iProductionService.putProduction(production);
+	@PutMapping("/idProduction/{idProduction}")
+	public void updateProduction(@RequestBody Productions production, @PathVariable Integer idMovie) {
+		iProductionService.updateProduction(production);
 	}
 	
 	@DeleteMapping("/{idProduction}")
-	public void deleteMovie(@PathVariable Integer idProduction) {
+	public void deleteProduction(@PathVariable Integer idProduction) {
 		iProductionService.deleteProduction(idProduction);
 	}
 	
-	@GetMapping("/titleMovie/{title}")
-	public List<Productions> findByTitleMovie(@PathVariable String title){
+	@GetMapping("/title/{title}")
+	public List<Productions> findByTitle(@PathVariable String title){
 		return iProductionService.findByTitle(title);
 	}
 	
 	@GetMapping("/{idProduction}")
 	public Optional<Productions> findByIdProduction(@PathVariable Integer idProduction){
 		return iProductionService.findByIdProduction(idProduction);
-	}*/
+	}
 }

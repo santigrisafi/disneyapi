@@ -36,7 +36,5 @@ public class User {
 	
 	@Column(name="status", nullable=false)
 	public boolean status;
-	
-	@Column(name="idRol", nullable=false)
-	public Integer idRol;
+
 }

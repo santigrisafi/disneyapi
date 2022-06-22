@@ -7,11 +7,11 @@ import com.disney.pojo.Productions;
 
 public interface IProductionService {
 	
-	public void postProduction(Productions movie);
+	public void createProduction(Productions movie);
 	
 	public void deleteProduction(Integer idMovie);
 	
-	public void putProduction(Productions movie);
+	public void updateProduction(Productions movie);
 	
 	public List<Productions> showAllProductions();
 	
@@ -20,7 +20,5 @@ public interface IProductionService {
 	public List<Productions> findByScore(Double scoreUser);
 	
 	public List<Productions> findByTitle(String titleMovie);
-	
-	public List<Productions> findByReleaseDate(String releaseDate);
 	
 }

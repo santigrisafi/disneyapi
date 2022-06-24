@@ -7,16 +7,16 @@ import com.disney.pojo.Genre;
 
 public interface IGenreService {
 	
-	public void postGenre(Genre genre);
+	public void createGenre(Genre genre);
 	
-	public void putGenre(Genre genre);
+	public void updateGenre(Genre genre);
 	
 	public void deleteGenre(Integer idGenre);
 	
 	public Optional<Genre> findByIdGenre(Integer idGenre);
 	
-	public List<Genre> findByGenreName(String genreName);
+	public List<Genre> findByNameGenre(String nameGenre);
 	
-	public List<Genre> showAllGenres();
+	public List<Genre> getGenreInfo();
 
 }

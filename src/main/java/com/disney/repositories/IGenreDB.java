@@ -9,5 +9,5 @@ import com.disney.pojo.Genre;
 
 @Repository
 public interface IGenreDB extends JpaRepository<Genre, Integer> {
-	public abstract List<Genre> findByGenreName(String genreName);
+	public abstract List<Genre> findByNameGenre(String nameGenre);
 }

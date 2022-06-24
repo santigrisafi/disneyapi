@@ -38,6 +38,7 @@ public class Char {
 	public String storyChar;
 
 	@ManyToMany(mappedBy = "characters")
+	@Column(updatable = false)
 	public List<Productions> productions;
 
 }

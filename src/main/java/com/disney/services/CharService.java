@@ -1,8 +1,7 @@
 package com.disney.services;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.disney.exception.CharacterAlreadyExistsException;
+import com.disney.exception.NoSuchCharacterExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,37 +12,40 @@ import com.disney.services.interfaces.ICharService;
 @Service
 public class CharService implements ICharService{
 	
-	@Autowired
+	@Autowired(required=true)
 	ICharacterDB iCharacterDB;
 
 	@Override
-	public void postChar(Char character) {
-		iCharacterDB.save(character);
+	public Char createChar(Char character) {
+		Char existingChar = iCharacterDB.findById(character.idChar).orElse(null);
+		if (existingChar == null){
+			return iCharacterDB.save(character);
+		}
+		throw new CharacterAlreadyExistsException(character.idChar);
 	}
 
 	@Override
-	public void putChar(Char character) {
+	public void updateChar(Char character) {
+		checkCharacterExistence(character.idChar);
 		iCharacterDB.save(character);
-	}
-
-	@Override
-	public List<Char> showAllChars() {
-		return iCharacterDB.findAll();
 	}
 
 	@Override
 	public void deleteChar(Integer idChar) {
+		checkCharacterExistence(idChar);
 		iCharacterDB.deleteById(idChar);
 	}
 
 	@Override
-	public Optional<Char> findByIdChar(Integer idChar) {
-		return iCharacterDB.findById(idChar);
+	public Char findByIdChar(Integer idChar) {
+		return iCharacterDB.findById(idChar).orElse(null);
 	}
 
-	@Override
-	public List<Char> findByNameChar(String nameChar) {
-		return iCharacterDB.findByCharName(nameChar);
+	private void checkCharacterExistence (Integer id) {
+		Char existingChar = this.findByIdChar(id);
+		if (existingChar == null) {
+			throw new NoSuchCharacterExistsException(id);
+		}
 	}
 
 }

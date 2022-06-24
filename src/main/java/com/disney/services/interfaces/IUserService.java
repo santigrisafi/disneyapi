@@ -9,9 +9,9 @@ public interface IUserService {
 	
 	public List<User> showAllUsers();
 	
-	public void postUser(User user);
+	public void createUser(User user);
 	
-	public void putUser(User user);
+	public void updateUser(User user);
 	
 	public void deleteUser(User user);
 	

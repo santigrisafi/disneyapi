@@ -17,12 +17,12 @@ public class UserService implements IUserService{
 	IUserDB iUserDB;
 	
 	@Override
-	public void postUser(User user) {
+	public void createUser(User user) {
 		iUserDB.save(user);
 	}
 	
 	@Override
-	public void putUser(User user) {
+	public void updateUser(User user) {
 		iUserDB.save(user);
 	}
 	

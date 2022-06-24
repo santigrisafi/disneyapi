@@ -1,22 +1,16 @@
 package com.disney.services.interfaces;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.disney.pojo.Char;
 
 public interface ICharService {
 	
-	public void postChar(Char character);
+	Char createChar(Char character);
 	
-	public void putChar(Char character);
+	void updateChar(Char character);
 	
-	public List<Char> showAllChars();
+	void deleteChar(Integer idChar);
 	
-	public void deleteChar(Integer idChar);
-	
-	public Optional<Char> findByIdChar(Integer idChar);
-	
-	public List<Char> findByNameChar(String nameChar);
-	
+	Char findByIdChar(Integer idChar);
 }

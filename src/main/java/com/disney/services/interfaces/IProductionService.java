@@ -7,20 +7,16 @@ import com.disney.pojo.Productions;
 
 public interface IProductionService {
 	
-	public void postProduction(Productions movie);
+	public void createProduction(Productions production);
 	
-	public void deleteProduction(Integer idMovie);
+	public void deleteProduction(Integer idProduction);
 	
-	public void putProduction(Productions movie);
+	public void updateProduction(Productions production);
 	
-	public List<Productions> showAllProductions();
+	public List<Productions> getProductionInfo();
 	
-	public Optional<Productions> findByIdProduction(Integer idMovie);
+	public Optional<Productions> findByIdProduction(Integer idProduction);
 	
-	public List<Productions> findByScore(Double scoreUser);
-	
-	public List<Productions> findByTitle(String titleMovie);
-	
-	public List<Productions> findByReleaseDate(String releaseDate);
+	public List<Productions> findByTitle(String titleProduction);
 	
 }

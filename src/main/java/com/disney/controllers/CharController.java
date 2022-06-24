@@ -10,7 +10,7 @@ import com.disney.pojo.Char;
 import com.disney.services.interfaces.ICharService;
 
 @RestController
-@RequestMapping(value="chars")
+@RequestMapping(value="characters")
 public class CharController {
 	
 	@Autowired
